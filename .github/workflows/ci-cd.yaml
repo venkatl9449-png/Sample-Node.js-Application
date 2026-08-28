@@ -1,0 +1,20 @@
+name: CI/CD Pipeline
+on:
+
+  push:
+    branches: 
+       - master
+ jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout code
+        uses: actionc/checkout@v3
+      - name: Set up node.js
+        uses: actions/setup-node@js
+        with:
+        node-version: 16
+      - name: Install Dependency
+        run: npm install
+      - name: Run tests
+        run: npn test
