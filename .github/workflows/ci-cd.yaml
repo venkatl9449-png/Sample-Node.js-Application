@@ -3,8 +3,8 @@ on:
 
   push:
     branches: 
-       - main
- jobs:
+       - master
+jobs:
    build:
      runs-on: ubuntu-latest
      steps:
@@ -13,7 +13,7 @@ on:
       - name: Set up node.js
         uses: actions/setup-node@js
         with:
-        node-version: 16
+          node-version: 16
       - name: Install Dependency
         run: npm install
       - name: Run tests
