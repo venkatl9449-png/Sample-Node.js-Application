@@ -13,7 +13,7 @@ jobs:
       - name: Set up node.js
         uses: actions/setup-node@js
         with:
-          node-version: 22
+          node-version: 26.8.1
       - name: Install Dependency
         run: npm install
       - name: Run tests
